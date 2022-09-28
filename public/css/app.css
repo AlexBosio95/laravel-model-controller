@@ -1,0 +1,45 @@
+header {
+  height: 14vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(24, 23, 23);
+}
+
+header .logo {
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  line-height: 8vh;
+}
+
+header ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 15vh;
+  background-color: black;
+}
+
+main .card {
+  border: none;
+}
+
+footer {
+  height: 8vh;
+  background-color: rgb(28, 28, 28);
+}
+
