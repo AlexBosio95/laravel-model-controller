@@ -4,7 +4,10 @@
 
 @section('contain')
 
+
     <div class="d-flex flex-wrap justify-content-center">
+
+
         @foreach ($Movies as $movie)
             <div class="card m-2" style="width: 18rem;">
                 <div class="card-body">

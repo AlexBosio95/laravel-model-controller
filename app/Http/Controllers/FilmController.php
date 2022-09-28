@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Movie;
+use App\FilmEdit;
 
 class FilmController extends Controller
 {
@@ -11,7 +11,7 @@ class FilmController extends Controller
 
     public function FilmPage(){
 
-        $Movies = Movie::all();
+        $Movies = FilmEdit::all();
 
         return view('FilmEdit', compact('Movies'));
     }
