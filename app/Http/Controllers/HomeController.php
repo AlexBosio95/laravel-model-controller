@@ -10,8 +10,13 @@ class HomeController extends Controller
     //
     public function Home(){
 
-        $Movies = Movie::all();
+        try {
+            $Movies = Movie::all();
+            return view('Homepage', compact('Movies'));
+        } catch (\Throwable $th) {
+            return view('ErrorPage');
+        }
 
-        return view('Homepage', compact('Movies'));
+        
     }
 }

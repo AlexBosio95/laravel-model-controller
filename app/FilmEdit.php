@@ -8,4 +8,5 @@ class FilmEdit extends Model
 {
     //
     protected $table = 'moviesEdit';
+    
 }

@@ -10,9 +10,12 @@ class FilmController extends Controller
     //
 
     public function FilmPage(){
-
-        $Movies = FilmEdit::all();
-
-        return view('FilmEdit', compact('Movies'));
+        try {
+            $Movies = FilmEdit::all();
+            return view('FilmEdit', compact('Movies'));
+        } catch (\Throwable $th) {
+            return view('ErrorPage');
+        }
+        
     }
 }

@@ -31,6 +31,7 @@ header ul li a {
 
 main {
   padding-top: 15vh;
+  min-height: 92vh;
   background-color: black;
 }
 

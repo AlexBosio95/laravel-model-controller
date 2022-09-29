@@ -7,18 +7,26 @@
 
     <div class="d-flex flex-wrap justify-content-center">
 
-
-        @foreach ($Movies as $movie)
-            <div class="card m-2" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">{{$movie['title']}}</h5>
-                <p class="card-text">{{$movie['original_title']}}</p>
-                <p class="card-text">{{$movie['nationality']}}</p>
-                <p class="card-text">{{$movie['date']}}</p>
-                <span>{{$movie['vote']}}</span>
+        @isset($Movies)
+            @foreach ($Movies as $movie)
+                <div class="card m-2" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{$movie['title']}}</h5>
+                    <p class="card-text">{{$movie['original_title']}}</p>
+                    <p class="card-text">{{$movie['nationality']}}</p>
+                    <p class="card-text">{{$movie['date']}}</p>
+                    <span>{{$movie['vote']}}</span>
+                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @endisset
+        
+        @empty($Movies)
+            <h1>DB Vuoto</h1>
+        @endempty
+
+
+
     </div>
     
 @endsection
